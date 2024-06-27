@@ -33,10 +33,10 @@ const projects = [
 
 function Project() {
     return (
-        <div className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max mx-auto py-16 px-4 sm:px-6 lg:px-8 dark:bg-gray-700">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {projects.map((project, index) => (
-                    <div key={index} className="bg-white shadow overflow-hidden sm:rounded-lg">
+                    <div key={index} className="bg-white shadow overflow-hidden sm:rounded-lg max-w-full">
                         <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
                         <div className="px-4 py-4">
                             <h3 className="text-lg font-bold text-gray-800">{project.title}</h3>
