@@ -5,6 +5,7 @@ import { ThemeProvider } from '../Theme/theme';
 
 export default function Header() {
     const [themeMode, setThemeMode] = useState('light');
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const lightTheme = () => {
         setThemeMode('light');
@@ -21,7 +22,7 @@ export default function Header() {
 
     return (
         <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
-            <header className="shadow sticky z-50 top-0 bg-white dark:bg-black">
+            <header className="shadow sticky z-50 top-0 bg-white dark:bg-black glow-effect">
                 <nav className="border-gray-200 px-4 lg:px-6 py-4">
                     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                         <Link to="/" className="flex items-center">
@@ -34,16 +35,17 @@ export default function Header() {
                         <div className="flex items-center lg:order-2">
                             <ThemeBtn />
                         </div>
-                        <div className="flex items-center lg:hidden">
+                        <div className="flex items-center lg:hidden ">
                             <button
                                 type="button"
                                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                                 aria-controls="mobile-menu"
-                                aria-expanded="false"
+                                aria-expanded={isMobileMenuOpen}
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             >
                                 <span className="sr-only">Open main menu</span>
                                 <svg
-                                    className="block h-6 w-6"
+                                    className={`${isMobileMenuOpen ? 'hidden' : 'block'} h-6 w-6`}
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -58,7 +60,7 @@ export default function Header() {
                                     />
                                 </svg>
                                 <svg
-                                    className="hidden h-6 w-6"
+                                    className={`${isMobileMenuOpen ? 'block' : 'hidden'} h-6 w-6`}
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -74,15 +76,15 @@ export default function Header() {
                                 </svg>
                             </button>
                         </div>
-                        <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu">
-                            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <div className={`lg:flex lg:w-auto lg:order-1 ${isMobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
+                            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 ">
                                 <li>
                                     <NavLink
                                         to="/"
                                         className={({ isActive }) =>
                                             `block py-2 pr-4 pl-3 transition duration-200 ${
-                                                isActive ? 'text-orange-700' : 'text-gray-700'
-                                            } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                                isActive ? 'text-orange-700' : 'text-gray-700 '
+                                            } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0 `
                                         }
                                     >
                                         Home

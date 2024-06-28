@@ -2,17 +2,17 @@ import React from 'react';
 
 const projects = [
     {
-        category: 'JavaScript',
-        title: 'Project 1',
-        description: 'This is a JavaScript project description.',
-        image: 'https://example.com/project1.jpg',
-        link: 'https://react-with-nitin.vercel.app/',
+        category: 'ReactJs',
+        title: 'Todo Manage Application',
+        description: 'A Todo manage application is a tool designed to help users organize, prioritize, and track their tasks efficiently.',
+        image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgylhUxICqnALcZUBAEvX2B7Z-gISWa1fmZtoGkEAH2NXc2rnPlRupJ6KPfDB8Zv3rRV2PJQd65lUFGrEAfIjzEj6GubWSeOggn43iquPirKk3uyFmT6TRg_Yfu2iuhWGSOwcz5gRBLPkpVpbwGWv3YXEgkYlkWJqv2h_Iy_7hR1nxMBUJ6ARFXrzQFjpw/s837/todoapp.png",
+        link: 'https://todomanagerapp.vercel.app/',
     },
     {
-        category: 'JavaScript',
-        title: 'Project 2',
-        description: 'This is another JavaScript project description.',
-        image: 'https://example.com/project2.jpg',
+        category: 'ReactJs',
+        title: 'Currency Converter Application',
+        description: 'A currency converter application allows users to easily convert amounts between different currencies using real-time exchange rates.',
+        image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI1_tD2oh0dv8wKwYkcbaXUNn96gWuL9oYQwZC9U7jQlL_tWcEhHVnES90zHFw01j-7lPtMbkI2njghTP5tEPVxviG-RwcIYpNL13E07NGgG0eqKkiKouPSNcRz14469GaBju4S2-xl7BGbq2JMsctavj088LTdQ5Kl3rhCZq8lrbMeqAJ_ecGIks6a0Q/s694/currencyapp.png',
         link: 'https://react-with-nitin.vercel.app/',
     },
     {
@@ -45,9 +45,9 @@ function Project() {
                                 href={project.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-4 inline-block bg-orange-700 hover:bg-orange-600 text-white py-2 px-4 rounded-lg transition duration-300"
+                                className="mt-4 inline-block bg-orange-700 hover:bg-orange-600 text-white py-2 px-4 rounded-lg transition duration-300 dark:bg-yellow-700 dark:hover:bg-yellow-600"
                             >
-                                Check Project
+                                Visit Project
                             </a>
                         </div>
                     </div>

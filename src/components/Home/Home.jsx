@@ -15,12 +15,12 @@ export default function Home() {
                 </div>
 
                 <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full fade-in" style={{ animationDelay: '0.5s' }}>
-                    <img className="w-96" src="https://i.ibb.co/5BCcDYB/Remote2.png" alt="image1" />
+                    <img className="w-96 " src="https://png.pngtree.com/png-vector/20220710/ourmid/pngtree-business-worker-at-workplace-png-image_5695269.png" alt="image1" />
                 </div>
             </aside>
 
             <div className="grid place-items-center sm:mt-20 fade-in" style={{ animationDelay: '1s' }}>
-                <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
+                <img className="sm:w-100 w-48" src="https://www.freecodecamp.org/news/content/images/2022/11/hire-full-stack-developers1546507474317-1.gif" alt="image2" />
             </div>
 
             <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium fade-in" style={{ animationDelay: '1.5s' }}>
