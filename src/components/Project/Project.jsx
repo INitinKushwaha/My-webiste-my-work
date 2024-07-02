@@ -20,7 +20,7 @@ const projects = [
         title: 'BlogHere',
         description: 'A dynamic blogging website utilizing React, Redux, TailwindCSS, Appwrite, React Hook Form, and TinyMCE for an enhanced user experience.',
         image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhI19RCfg9kQK7X3tCIA_2w-oefO5o8kBLc0pljjq_ZTFMl3CJNUz8pZi5-3L1gQsUVZax8g-CvzgancvqSOaSUktrwQ5enSqg7VQIvZxYnoksIDokQ3NkM5D3nSVdpbWC3HL99F69gmcLFxF_CU-jPvkD2eWpJ5CvWJj2lrDF4IvxlRRy9o3WqdSNcCBY/s320/Screenshot%202024-07-02%20084435.png',
-        link: 'bloghere-delta.vercel.app',
+        link: 'https://bloghere-delta.vercel.app/',
     },
     
 ];
