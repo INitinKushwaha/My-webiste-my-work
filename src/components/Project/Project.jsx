@@ -22,7 +22,18 @@ const projects = [
         image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI1_tD2oh0dv8wKwYkcbaXUNn96gWuL9oYQwZC9U7jQlL_tWcEhHVnES90zHFw01j-7lPtMbkI2njghTP5tEPVxviG-RwcIYpNL13E07NGgG0eqKkiKouPSNcRz14469GaBju4S2-xl7BGbq2JMsctavj088LTdQ5Kl3rhCZq8lrbMeqAJ_ecGIks6a0Q/s694/currencyapp.png',
         link: 'https://react-with-nitin.vercel.app/',
     },
+<<<<<<< HEAD
    
+=======
+    {
+        category: 'ReactJs',
+        title: 'BlogHere',
+        description: 'A dynamic blogging website utilizing React, Redux, TailwindCSS, Appwrite, React Hook Form, and TinyMCE for an enhanced user experience.',
+        image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhI19RCfg9kQK7X3tCIA_2w-oefO5o8kBLc0pljjq_ZTFMl3CJNUz8pZi5-3L1gQsUVZax8g-CvzgancvqSOaSUktrwQ5enSqg7VQIvZxYnoksIDokQ3NkM5D3nSVdpbWC3HL99F69gmcLFxF_CU-jPvkD2eWpJ5CvWJj2lrDF4IvxlRRy9o3WqdSNcCBY/s320/Screenshot%202024-07-02%20084435.png',
+        link: 'https://bloghere-delta.vercel.app/',
+    },
+    
+>>>>>>> bfb0e62d727f3181885702b7f7bdf28ef99581f9
 ];
 
 function Project() {
