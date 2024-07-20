@@ -7,7 +7,7 @@ export default function About() {
                 <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
                     <div className="md:5/12 lg:w-5/12 ">
                         <img
-                            src="https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguWiVU0T672Z528-VqVAkA1GeRtCH_tbhVLzOe1fJyXtFNwF3CJNB47nGb3DriNut52ONrfptX5JmBgRFNt_KHHTtGT1pq3ZuCwaePJztOEEu8AwIpcgysV872Q1dmTCvoEy00uG3SwdPHdlaq4wm9IKdaLLe2tQl9VHDoQRwc43di-5LZUbwPKPCxIfw/s320/dp.png"
                             alt="Nitin Kushwaha"
                             className="rounded-full w-80 mx-auto glow-effect "
                         />
