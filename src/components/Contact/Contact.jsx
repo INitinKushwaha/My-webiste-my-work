@@ -1,38 +1,40 @@
 import React, { useState } from 'react';
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        tel: ''
+        tel: '',
+        description: ''
     });
+    const form = useRef();
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        try {
-            const response = await fetch('/api/sendEmail', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
+        const emailParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            phone_number: formData.tel,
+            message: formData.description
+        };
+    
+        emailjs.send('service_aalppiz', 'template_4dqxtqs', emailParams, 'U0KFdC6oZ0TTTjdOk')
+            .then((response) => {
+                console.log('Success:', response);
                 alert('Message sent successfully!');
-                setFormData({ name: '', email: '', tel: '' }); // Clear form fields on success
-            } else {
+                setFormData({ name: '', email: '', tel: '', description: '' }); // Clear form fields on success
+            })
+            .catch((error) => {
+                console.error('Error sending message:', error);
                 alert('Failed to send message.');
-            }
-        } catch (error) {
-            console.error('Error sending message:', error);
-            alert('Failed to send message.');
-        }
+            });
     };
 
     return (
@@ -121,7 +123,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="p-6 flex flex-col justify-center">
+                        <form ref={form} onSubmit={handleSubmit} className="p-6 flex flex-col justify-center">
                             <div className="flex flex-col">
                                 <label htmlFor="name" className="hidden">
                                     Full Name
