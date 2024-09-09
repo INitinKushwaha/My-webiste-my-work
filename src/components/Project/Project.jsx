@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 const projects = [
     {
+        "category": "MERN",
+        "title": "Quote of the Day",
+        "description": "A full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) that displays a random quote each day. The front end is designed with React and TailwindCSS for a responsive UI, while the back end uses Node.js and Express to handle API requests. Users can search for quotes by author name, and quotes are stored and fetched from a MongoDB database. The app is deployed on Vercel and Render, providing seamless user experience across devices.",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEid3yU0ILUym_fMj-VtNc0Q9E5fqJv4Tv1rUNH7Fr94Y9gZocmUdghNLLxgYa-zHpnDnZrJyFOEmBTewQBT7h_NXgXsoL9JF6l9sTvNo6271su2eOy66TQbbTpSuLXfaPFIBppkS53WrW7ukwVq3aqVlrZlm2Wu-MhTMSPHf0bisPFpqa4ROhfsTfc-6Ts/s320/Screenshot%202024-09-06%20015425.png",
+        "link": "https://techplement-2mx3.vercel.app/"
+      },
+    {
         category: 'ReactJs',
         title: 'BlogHere',
         description: 'A dynamic blogging website utilizing React, Redux, TailwindCSS, Appwrite, React Hook Form, and TinyMCE for an enhanced user experience.',
