@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 
@@ -96,7 +96,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    +91 9305923954
+                                    +91 93059239XX
                                 </div>
                              </div> 
 
