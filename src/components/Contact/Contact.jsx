@@ -19,14 +19,14 @@ export default function Contact() {
         e.preventDefault();
 
         const emailParams = {
-            from_name: formData.name,
-            from_email: formData.email,
-            phone_number: formData.tel,
-            message: formData.description
-        };
+  from_name: formData.name,
+  from_email: formData.email,
+  phone_number: formData.tel,
+  message: formData.description,
+};
+
     
-        emailjs.send('service_aalppiz', 'template_4dqxtqs', emailParams, 'U0KFdC6oZ0TTTjdOk')
-            .then((response) => {
+        emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID,import.meta.env.VITE_EMAILJS_TEMPLATE_ID,emailParams,import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then((response) => {
                 console.log('Success:', response);
                 alert('Message sent successfully!');
                 setFormData({ name: '', email: '', tel: '', description: '' }); // Clear form fields on success
