@@ -26,10 +26,13 @@ export default function Contact() {
 };
 
     
-        emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID,import.meta.env.VITE_EMAILJS_TEMPLATE_ID,emailParams,import.meta.env.VITE_EMAILJS_PUBLIC_KEY).then((response) => {
+        emailjs.send('service_aalppiz', 'template_4dqxtqs', emailParams, 'k8M6Quou9nL5ngjKi')
+            .then((response) => {
                 console.log('Success:', response);
                 alert('Message sent successfully!');
-                setFormData({ name: '', email: '', tel: '', description: '' }); // Clear form fields on success
+                setFormData({ name: '', email: '', tel: '', description: '' });
+                console.log("Sending:", emailParams);
+ // Clear form fields on success
             })
             .catch((error) => {
                 console.error('Error sending message:', error);
