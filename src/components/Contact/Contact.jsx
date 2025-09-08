@@ -5,8 +5,6 @@ import emailjs from 'emailjs-com';
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
-        email: '',
-        tel: '',
         description: ''
     });
     const form = useRef();
@@ -20,8 +18,6 @@ export default function Contact() {
 
         const emailParams = {
   from_name: formData.name,
-  from_email: formData.email,
-  phone_number: formData.tel,
   message: formData.description,
 };
 
@@ -30,7 +26,7 @@ export default function Contact() {
             .then((response) => {
                 console.log('Success:', response);
                 alert('Message sent successfully!');
-                setFormData({ name: '', email: '', tel: '', description: '' });
+                setFormData({ name: '', description: '' });
                 console.log("Sending:", emailParams);
  // Clear form fields on success
             })
@@ -77,7 +73,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Panki Kanpur India, 208020
+                                     Kanpur India, 208020
                                 </div>
                             </div>
 
@@ -99,7 +95,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    +91 93059239XX
+                                    +91 9305923954
                                 </div>
                              </div> 
 
@@ -142,35 +138,6 @@ export default function Contact() {
                                 />
                             </div>
 
-                            <div className="flex flex-col mt-2">
-                                <label htmlFor="email" className="hidden">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
-                                />
-                            </div>
-
-                            <div className="flex flex-col mt-2">
-                                <label htmlFor="tel" className="hidden">
-                                    Telephone Number
-                                </label>
-                                <input
-                                    type="tel"
-                                    name="tel"
-                                    id="tel"
-                                    placeholder="Telephone Number"
-                                    value={formData.tel}
-                                    onChange={handleChange}
-                                    className="w-full mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
-                                />
-                            </div>
                             <div className="flex flex-col mt-2">
                                 <label htmlFor="description" className="hidden">
                                     Description
